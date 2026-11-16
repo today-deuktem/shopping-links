@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오늘도득템 링크 모음</title>
+<meta name="description" content="영상에서 소개한 상품 링크를 번호로 찾아보세요.">
+<meta property="og:title" content="오늘도득템 링크 모음">
+<meta property="og:description" content="영상 속 상품 번호(#012)를 검색하면 바로 구매 링크로 이동합니다.">
+<meta name="theme-color" content="#111827">
+<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<header class="hd">
+  <h1>오늘도득템 <span>링크 모음</span></h1>
+  <p class="sub">영상에서 말한 번호를 그대로 검색하세요. 예: <code>#012</code> 또는 <code>12</code></p>
+  <div class="search">
+    <input id="q" type="search" inputmode="search" placeholder="#012 · 상품명 검색" autocomplete="off" aria-label="상품 번호 또는 이름 검색">
+    <button id="clear" type="button" aria-label="지우기">✕</button>
+  </div>
+  <div id="chips" class="chips"></div>
+</header>
+
+<main id="list" class="grid" aria-live="polite"></main>
+<p id="empty" class="empty" hidden>해당 번호의 상품이 없어요. 번호를 다시 확인해 주세요.</p>
+
+<footer class="ft">
+  <p id="disclosure"></p>
+  <p class="meta"><span id="updated"></span> · <a href="./products.json">데이터</a></p>
+</footer>
+<script src="./assets/app.js" defer></script>
+</body>
+</html>
